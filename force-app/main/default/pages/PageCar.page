@@ -1,0 +1,24 @@
+<apex:page StandardController="Account" extensions="CarController">
+    <apex:form >
+        <apex:pageBlock title="Miami Cars">
+          <apex:pageBlockTable title="Opportunities" value="{!opportunityList}" var="opp" >
+            <apex:column headerValue="Name">
+                <apex:outputText value="{!opp.Name}"/>
+            </apex:column>
+            <apex:column headerValue="Model Year">
+                <apex:outputText value="{!opp.Model_Year__c}"/>
+            </apex:column>
+            <apex:column headerValue="Registration Plate">
+                <apex:outputText value="{!opp.Registration_Plate__c}"/>
+            </apex:column>
+            <apex:column headerValue="Leasing">
+                <apex:outputText value="{!opp.Leasing__c}"/>
+            </apex:column>
+            <apex:column headerValue="Price">
+                <apex:outputText value="{!opp.Price__c}"/>
+            </apex:column>
+          </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>
